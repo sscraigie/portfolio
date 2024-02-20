@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // import React from "react";
 // import Link from "next/link";
 
@@ -21,19 +21,18 @@
 //   );
 // };
 
-
-
-
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import { Mode } from "@mui/icons-material";
+import { ModeToggle } from "./ModeToggle";
 // import { Badge } from "@/registry/new-york/ui/badge"
 
 export function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -41,7 +40,7 @@ export function Navbar() {
         {/* <Icons.logo className="h-6 w-6" /> */}
         <span>☕</span>
         <span className="hidden font-bold sm:inline-block">
-        <b>Spencer Craigie</b>
+          <b>Spencer Craigie</b>
         </span>
       </Link>
       <nav className="flex items-center gap-6 text-sm">
@@ -49,7 +48,7 @@ export function Navbar() {
           href="/docs"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            pathname === "/docs" ? "text-foreground" : "text-foreground/60",
           )}
         >
           Docs
@@ -60,7 +59,7 @@ export function Navbar() {
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/docs/components")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
           Components
@@ -71,7 +70,7 @@ export function Navbar() {
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/themes")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
           Themes
@@ -82,7 +81,7 @@ export function Navbar() {
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/examples")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
           Examples
@@ -90,12 +89,13 @@ export function Navbar() {
         <Link
           href="https://github.com/sscraigie"
           className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
+            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block",
           )}
         >
           GitHub
         </Link>
+        <ModeToggle />
       </nav>
     </div>
-  )
+  );
 }
