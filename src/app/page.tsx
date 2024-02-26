@@ -1,9 +1,10 @@
 import { Hero } from "@/components/Hero";
-import LandingPage from "./day/3/page";
 
-export default function Home() {
-  <main>
+export const HeroPage = () => {
+  <div>
     <h1>This is my portfolio</h1>
     <Hero />
-  </main>;
-}
+  </div>;
+};
+
+export default HeroPage;

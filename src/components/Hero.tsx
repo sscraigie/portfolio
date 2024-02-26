@@ -1,18 +1,15 @@
+"use client";
 import React from "react";
+import Spline from "@splinetool/react-spline";
 
 export const Hero = () => {
   return (
-    <div className="flex">
-      <div>
-        <h1> My Portfolio</h1>
+    <div className="flex w-full justify-around">
+      <div className="w-full">
+        <h1>My Portfolio</h1>
       </div>
-      <div>
-        <iframe
-          src="https://my.spline.design/untitled-474a2be0998e891fd7eb2d77f9ad1c13/"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-        ></iframe>
+      <div className="w-full">
+        <Spline scene="https://prod.spline.design/Td1dXQyEuR-cNJOO/scene.splinecode" />
       </div>
     </div>
   );
