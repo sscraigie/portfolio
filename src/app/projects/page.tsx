@@ -43,8 +43,8 @@ const Portfolio = () => {
         <div className="flex max-w-7xl flex-col ">
           <h1 className="p-10 text-3xl">Portfolio</h1>
           <div className="flex w-full flex-wrap items-center justify-center ">
-            {PROJECTS.map((project) => (
-              <Card project={project} />
+            {PROJECTS.map((project, index) => (
+              <Card key={index} project={project} />
               // <InfoCard key={day.day} day={day.day} title={day.title} />
             ))}
           </div>
