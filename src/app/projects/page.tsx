@@ -19,7 +19,7 @@ const PROJECTS: project[] = [
   {
     title: "Harvard Classics",
     description: "Reading the Harvard Classics in 365 days",
-    href: "harvardclassics.spencercraigie.com",
+    href: "harvard-classic.vercel.app",
     image: "/projects/harvard.png",
   },
   {

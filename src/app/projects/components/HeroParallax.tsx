@@ -105,12 +105,12 @@ export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
       <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
-        The Ultimate <br /> development studio
+        My Projects
       </h1>
       <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
-        We build beautiful projects with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing projects.
+        Here are some of the projects I have worked on over the years. I have
+        used a variety of technologies and tools to make them including React,
+        Next.js, Tailwind CSS, and many more.
       </p>
     </div>
   );
