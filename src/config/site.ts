@@ -4,7 +4,7 @@ export const siteConfig = {
   ogImage: "",
   description: "My developer portfolio",
   links: {
-    twitter: "https://twitter.com/sscraigie",
+    linkedin: "https://www.linkedin.com/in/spencercraigie/",
     github: "https://github.com/sscraigie",
   },
 };

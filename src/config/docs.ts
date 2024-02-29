@@ -5,35 +5,27 @@
 
 export const docsConfig = {
   mainNav: [
+    { title: "Home", href: "/" },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Projects",
+      href: "/projects",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Docs",
+      href: "/coming-soon",
+      // href: "/docs/components/accordion",
     },
     {
-      title: "Themes",
-      href: "/themes",
+      title: "Blog",
+      href: "/coming-soon",
     },
     {
-      title: "Examples",
-      href: "/examples",
+      title: "API",
+      href: "/coming-soon",
     },
     {
-      title: "Figma",
-      href: "/docs/figma",
-    },
-    {
-      title: "GitHub",
-      href: "https://github.com/shadcn/ui",
-      external: true,
-    },
-    {
-      title: "Twitter",
-      href: "https://twitter.com/shadcn",
-      external: true,
+      title: "CLI",
+      href: "/coming-soon",
     },
   ],
   sidebarNav: [
