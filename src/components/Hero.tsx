@@ -5,8 +5,13 @@ import Spline from "@splinetool/react-spline";
 export const Hero = () => {
   return (
     <div className="flex w-full items-center justify-around py-10">
-      <div className="flex w-full items-center justify-center">
-        <h1 className="text text-5xl">My Portfolio</h1>
+      <div className="py-19 top-0 mx-auto  w-full max-w-7xl px-20 md:py-40">
+        <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
+          Hello 👋 <br /> I&apos;m Spencer
+        </h1>
+        <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+          This is my full stack developer portfolio.
+        </p>
       </div>
       <div className="w-full justify-center ">
         <Spline
