@@ -79,14 +79,14 @@ export function MobileNav() {
                 ),
             )}
           </div>
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             {docsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
                   item.items.map((item) => (
                     <React.Fragment key={item.href}>
-                      {/* {!item.disabled && */}
+                       {!item.disabled && 
                       {item.href ? (
                         <MobileLink
                           href={item.href}
@@ -103,12 +103,13 @@ export function MobileNav() {
                       ) : (
                         item.title
                       )}
-                      {/* ))} */}
+                       ))} 
                     </React.Fragment>
                   ))}
               </div>
-            ))}
+            ))} 
           </div>
+                      </SheetContent>*/}
         </ScrollArea>
       </SheetContent>
     </Sheet>
