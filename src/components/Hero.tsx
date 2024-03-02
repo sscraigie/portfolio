@@ -13,7 +13,7 @@ export const Hero = () => {
           This is my full stack developer portfolio.
         </p>
       </div>
-      <div className="w-full justify-center ">
+      <div className="h-96 w-full justify-center ">
         <Spline
           className=""
           scene="https://prod.spline.design/Td1dXQyEuR-cNJOO/scene.splinecode"
