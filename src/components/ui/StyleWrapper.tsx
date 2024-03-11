@@ -2,17 +2,17 @@
 
 import * as React from "react";
 
-import { useConfig } from "@/hooks/use-config";
-import { Style } from "@/registry/styles";
+// import { useConfig } from "@/hooks/use-config";
+// import { Style } from "@/registry/styles";
 
 interface StyleWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
-  styleName?: Style["name"];
+  styleName?: string //Style["name"];
 }
 
 export function StyleWrapper({ styleName, children }: StyleWrapperProps) {
-  const [config] = useConfig();
+  // const [configa` = useConfig();
 
-  if (!styleName || config.style === styleName) {
+  if (!styleName || 'new-york' === styleName) {
     return <>{children}</>;
   }
 

@@ -6,17 +6,17 @@ import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { NpmCommands } from "@/types/unist";
 
-import { Event } from "@/lib/events";
+// import { Event } from "@/lib/events";
 import { cn } from "@/lib/utils";
-import { useConfig } from "@/hooks/use-config";
-import { Callout } from "@/components/callout";
+// import { useConfig } from "@/hooks/use-config";
+import { Callout } from "@/components/ui/Callout";
 import { CodeBlockWrapper } from "./CodeBlockWrapper";
 // import { ComponentExample } from "@/components/component-example";
-import { ComponentPreview } from "@/components/component-preview";
-import { ComponentSource } from "@/components/component-source";
-import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button";
+// import { ComponentPreview } from "@/components/component-preview";
+// import { ComponentSource } from "@/components/component-source";
+import { CopyButton, CopyNpmCommandButton } from "@/components/ui/CopyButton";
 // import { FrameworkDocs } from "@/components/framework-docs";
-// import { StyleWrapper } from "./StyleWrapper";
+import { StyleWrapper } from "./StyleWrapper";
 import {
   Accordion,
   AccordionContent,
@@ -26,7 +26,22 @@ import {
 import { Alert, AlertDescription, AlertTitle } from "./alert";
 import { AspectRatio } from "./aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
-import { Style } from "@/registry/styles";
+// import { Style } from "@/registry/styles";
+
+//------- styles.ts --------
+export const styles = [
+  {
+    name: "default",
+    label: "Default",
+  },
+  {
+    name: "new-york",
+    label: "New York",
+  },
+] as const;
+
+export type Style = (typeof styles)[number];
+//------------------------
 
 const components = {
   Accordion,
@@ -174,7 +189,7 @@ const components = {
     __rawString__?: string;
     __withMeta__?: boolean;
     __src__?: string;
-    __event__?: Event["name"];
+    __event__?: any; //Event["name"];
   } & NpmCommands) => {
     return (
       <StyleWrapper styleName={__style__}>
@@ -221,9 +236,9 @@ const components = {
   ),
   Image,
   Callout,
-  ComponentPreview,
-  ComponentExample,
-  ComponentSource,
+  //   ComponentPreview,
+  //   ComponentExample,
+  //   ComponentSource,
   AspectRatio,
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />
@@ -282,12 +297,12 @@ const components = {
       {...props}
     />
   ),
-  FrameworkDocs: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof FrameworkDocs>) => (
-    <FrameworkDocs className={cn(className)} {...props} />
-  ),
+  //   FrameworkDocs: ({
+  //     className,
+  //     ...props
+  //   }: React.ComponentProps<typeof FrameworkDocs>) => (
+  //     <FrameworkDocs className={cn(className)} {...props} />
+  //   ),
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
       className={cn("font-medium underline underline-offset-4", className)}
@@ -310,9 +325,9 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
-  const [config] = useConfig();
+  //   const [config] = useConfig();
   const Component = useMDXComponent(code, {
-    style: config.style,
+    style: "new-york", //config.style,
   });
 
   return (

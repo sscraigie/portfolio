@@ -3,28 +3,30 @@
 import * as React from "react";
 import { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, CopyIcon } from "@radix-ui/react-icons";
-import { NpmCommands } from "types/unist";
+import { NpmCommands } from "@/types/unist";
 
-import { Event, trackEvent } from "@/lib/events";
+// import { Event, trackEvent } from "@/lib/events";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/new-york/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   value: string;
   src?: string;
-  event?: Event["name"];
+  event?: any; //Event["name"];
 }
 
-export async function copyToClipboardWithMeta(value: string, event?: Event) {
+export async function copyToClipboardWithMeta(value: string, event?: any) {
+  //Event) {
   navigator.clipboard.writeText(value);
   if (event) {
-    trackEvent(event);
+    throw new Error("Need track event");
+    // trackEvent(event);
   }
 }
 

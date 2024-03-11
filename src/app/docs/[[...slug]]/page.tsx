@@ -10,9 +10,9 @@ import Balancer from "react-wrap-balancer";
 import { siteConfig } from "@/config/site";
 // import { getTableOfContents } from "@/lib/toc";
 import { absoluteUrl, cn } from "@/lib/utils";
-import { Mdx } from "@/components/mdx-components";
-import { DocsPager } from "@/components/pager";
-import { DashboardTableOfContents } from "@/components/toc";
+import { Mdx } from "@/components/ui/MdxComponents";
+// import { DocsPager } from "@/components/pager";
+import { DashboardTableOfContents } from "@/components/ui/Toc";
 import { badgeVariants } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -33,6 +33,8 @@ const doc = {
   slug: "slug",
   slugAsParams: "slug/as/params",
 };
+
+const DocsPager = () => null;
 //------------------------------------------------------------------------------
 interface DocPageProps {
   params: {
@@ -153,7 +155,7 @@ export default async function DocPage({ params }: DocPageProps) {
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
-        <DocsPager doc={doc} />
+        {/* <DocsPager doc={doc} /> */}
       </div>
       {doc.toc && (
         <div className="hidden text-sm xl:block">
