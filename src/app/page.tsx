@@ -6,7 +6,7 @@ export default function HeroPage() {
   return (
     <div>
       <Hero />
- //     <TechScoll />
+      {/* <TechScoll /> */}
     </div>
   );
 }
