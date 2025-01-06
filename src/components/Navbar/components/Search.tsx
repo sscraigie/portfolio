@@ -13,7 +13,7 @@ import {
 import { useTheme } from "next-themes";
 
 import { docsConfig } from "@/config/docs";
-import { cn } from "@/lib/utils";
+import cn from "classnames"
 import { Button } from "@/components/ui/button";
 import {
   CommandDialog,

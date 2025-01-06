@@ -14,7 +14,7 @@ export interface SidebarNavItem {
   items?: any;
 }
 
-import { cn } from "@/lib/utils";
+import cn from "classnames"
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[];

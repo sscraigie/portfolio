@@ -7,7 +7,7 @@ import { ViewVerticalIcon } from "@radix-ui/react-icons";
 
 import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+import cn from "classnames"
 import { Icons } from "@/components/Icons";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";

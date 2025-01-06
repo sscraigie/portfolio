@@ -26,7 +26,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils";
+import cn from "classnames"
 import { ModeToggle } from "./ModeToggle";
 // import { Badge } from "@/registry/new-york/ui/badge"
 

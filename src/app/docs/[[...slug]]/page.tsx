@@ -8,8 +8,8 @@
 // import Balancer from "react-wrap-balancer";
 
 // import { siteConfig } from "@/config/site";
-// import { getTableOfContents } from "@/lib/toc";
-// import { absoluteUrl, cn } from "@/lib/utils";
+// import { getTableOfContents } from "@/app/blog/_lib/toc";
+// import { absoluteUrl, cn } from "@/app/blog/_lib/utils";
 // import { Mdx } from "@/components/mdx-components";
 // import { DocsPager } from "@/components/pager";
 // import { DashboardTableOfContents } from "@/components/toc";
