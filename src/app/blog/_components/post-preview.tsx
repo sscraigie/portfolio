@@ -1,4 +1,4 @@
-import { type Author } from "@/interfaces/author";
+import { type Author } from "../_lib/interfaces";
 import Link from "next/link";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";

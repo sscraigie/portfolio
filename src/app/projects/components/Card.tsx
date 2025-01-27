@@ -2,6 +2,7 @@
 import React from "react";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { project } from "../page";
+import  Image  from "next/image"
 
 export default function Card({ project }: { project: project }) {
   const { title, description, href, image } = project;
@@ -16,7 +17,7 @@ export default function Card({ project }: { project: project }) {
         </div>
         <div className="mt-4 flex w-full flex-1 rounded-lg bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
           {image && (
-            <img
+            <Image
               src={image}
               alt={title}
               className="h-full w-full rounded-lg object-cover"

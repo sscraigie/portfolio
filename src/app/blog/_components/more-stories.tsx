@@ -1,4 +1,4 @@
-import { Post } from "@/interfaces/post";
+import { Post } from "../_lib/interfaces";
 import { PostPreview } from "./post-preview";
 
 type Props = {
