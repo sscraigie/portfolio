@@ -18,6 +18,8 @@ export default function Card({ project }: { project: project }) {
         <div className="mt-4 flex w-full flex-1 rounded-lg bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
           {image && (
             <Image
+              width={50}
+              height={50}
               src={image}
               alt={title}
               className="h-full w-full rounded-lg object-cover"
