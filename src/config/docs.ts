@@ -17,7 +17,7 @@ export const docsConfig = {
     },
     {
       title: "Blog",
-      href: "/coming-soon",
+      href: "/blog",
     },
     {
       title: "API",

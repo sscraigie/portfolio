@@ -4,7 +4,7 @@ import TechScoll from "@/components/TechScroll";
 
 export default function HeroPage() {
   return (
-    <div>
+    <div className="flex justify-center">
       <Hero />
       {/* <TechScoll /> */}
     </div>

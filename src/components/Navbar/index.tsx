@@ -22,7 +22,6 @@ export function SiteHeader() {
           <nav className="flex items-center">
             <Link
               href={siteConfig.links.github}
-              className=" no-underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -31,11 +30,11 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0",
+                  "px-0",
                 )}
               >
-                <Icons.gitHub className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
+                <Icons.gitHub className="h-5 w-5 fill-current" />
+                <span className="sr-only">Github</span>
               </div>
             </Link>
             <Link
@@ -48,11 +47,11 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0",
+                  "px-0",
                 )}
               >
                 <Icons.linkedin className="h-3 w-3 fill-current" />
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">Linkedin</span>
               </div>
             </Link>
             <ModeToggle />

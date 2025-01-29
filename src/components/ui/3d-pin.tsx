@@ -68,17 +68,17 @@ export const PinPerspective = ({
     <motion.div className="pointer-events-none  z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
       <div className=" inset-0 -mt-7 h-full w-full  flex-none">
         <div className="absolute inset-x-0 top-0  flex justify-center">
-          <a
+          {/*<a
             href={href}
             target={"_blank"}
             className="relative z-10 flex items-center space-x-2 rounded-full bg-zinc-950 px-4 py-0.5 ring-1 ring-white/10 "
-          >
+          >*/}
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
               {title}
             </span>
 
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
-          </a>
+          {/*</a>*/}
         </div>
 
         <div
@@ -160,5 +160,58 @@ export const PinPerspective = ({
         </>
       </div>
     </motion.div>
+  );
+};
+
+export const PinContainerWrapper = ({
+  children,
+  title,
+  href,
+  className,
+  containerClassName,
+}: {
+  children: React.ReactNode;
+  title?: string;
+  href?: string;
+  className?: string;
+  containerClassName?: string;
+}) => {
+  const [transform, setTransform] = useState(
+    "translate(-50%,-50%) rotateX(0deg)",
+  );
+
+  const onMouseEnter = () => {
+    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+  };
+  const onMouseLeave = () => {
+    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+  };
+
+  return (
+    <div
+      className={cn(
+        "group/pin relative z-50  cursor-pointer",
+        containerClassName,
+      )}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div
+        style={{
+          perspective: "1000px",
+          transform: "rotateX(70deg) translateZ(0deg)",
+        }}
+        className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          style={{
+            transform: transform,
+          }}
+        >
+          <div className={cn(" relative z-50 ", className)}>{children}</div>
+        </div>
+      </div>
+      <PinPerspective title={title} href={href} />
+    </div>
   );
 };

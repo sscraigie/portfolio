@@ -43,7 +43,7 @@ export function MainNav() {
           Docs
         </Link>
         <Link
-          href="/coming-soon"
+          href="/blog"
           className={cn(
             "no-underline transition-colors hover:text-foreground/80",
             pathname === "/blog" ? "text-foreground" : "text-foreground/60",

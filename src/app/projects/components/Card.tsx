@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { PinContainer } from "@/components/ui/3d-pin";
+import { PinContainer, PinContainerWrapper } from "@/components/ui/3d-pin";
 import { project } from "../page";
 import  Image  from "next/image"
 

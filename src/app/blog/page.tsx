@@ -2,11 +2,15 @@ import React from "react";
 export function Hero() {
   return (
 <>
+      <video autoPlay loop muted className="filter brightness-50 absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <source src="/reading.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
   <div className="relative left-0 top-0 mx-auto w-full h-screen max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
+      <h1 className="z-10 text-2xl font-bold dark:text-white md:text-7xl">
         Blog  
       </h1>
-      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+      <p className="mt-8 z-10 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
   A place to talk about software engineer, covering coding techniques, problem-solving approaches, and industry trends.
       </p>
     </div>
@@ -60,11 +64,25 @@ export default function Index() {
       </Container>
       */}
       <Hero />
-      <div className="flex col-2 justify-between">
+       <div className="p-2 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
         <ThreeDCard  
           title="Understanding OpenAPI: A Key Tool for API Development"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
         />
+        <ThreeDCard  
+          title="Understanding OpenAPI: A Key Tool for API Development"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
+        />
+        <ThreeDCard  
+          title="Understanding OpenAPI: A Key Tool for API Development"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
+        />
+        {allPosts.map((post)=>
+        <ThreeDCard  
+          title={post.title}
+          image={post.coverImage}
+        />
+        )}
       </div>
     </main>
   );
