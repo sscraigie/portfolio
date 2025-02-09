@@ -1,8 +1,8 @@
 ---
 title: "10 Lessons from the Pragmatic Programmer"
 excerpt: "\"The Pragmatic Programmer\" by Andrew Hunt and David Thomas is a timeless classic in the world of software development. The book provides practical advice and insights that help developers become better at their craft. Here are the top 10 takeaways from this influential book."
-coverImage: "/assets/blog/preview/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+coverImage: "https://i0.wp.com/grapeprogrammer.com/wp-content/uploads/2020/08/PragmaticBanner.png?fit=794%2C596&ssl=1"
+date: "2025-02-08T05:35:07.322Z"
 author:
   name: Spencer Craigie 
   picture: "https://avatars.githubusercontent.com/u/29681901?s=400&u=0409c337f963a7b28ea70665d788a19c98495315&v=4"
@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-> **Warning: This blog article was written with ChatGPT and is a place holder for other blog posts.**
+> **⚠️  This blog article was written with ChatGPT and is a place holder for other blog posts.**
 ___
 ### Introduction
 "The Pragmatic Programmer" by Andrew Hunt and David Thomas is a timeless classic in the world of software development. The book provides practical advice and insights that help developers become better at their craft. Here are the top 10 takeaways from this influential book.

@@ -1,8 +1,8 @@
 ---
-title: "Understanding OpenAPI: A Key Tool for API Development"
+title: "OpenAPI: A Key Tool for API Development"
 excerpt: "APIs (Application Programming Interfaces) are the backbone of modern software development, enabling different systems to communicate and interact seamlessly."
 coverImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
-date: "2020-03-16T05:35:07.322Z"
+date: "2025-01-16T05:35:07.322Z"
 author:
   name: Spencer Craigie 
   picture: "https://avatars.githubusercontent.com/u/29681901?s=400&u=0409c337f963a7b28ea70665d788a19c98495315&v=4"
@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-> **Warning: This blog article was written with ChatGPT and is a place holder for other blog posts.**
+> **⚠️  This blog article was written with ChatGPT and is a place holder for other blog posts.**
 ___
 # 
 
