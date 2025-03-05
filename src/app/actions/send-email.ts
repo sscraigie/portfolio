@@ -20,6 +20,7 @@
 //
 //export async function sendEmail({ name, email, message }: EmailProps) {
 //  try {
+//    console.log('Sending email...');
 //    // Send email
 //    const info = await transporter.sendMail({
 //      from: `"Contact Form" <${process.env.SMTP_FROM_EMAIL}>`, // sender address

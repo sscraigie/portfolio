@@ -30,6 +30,18 @@ const PROJECTS: project[] = [
     image: "/projects/speedSquare.png",
   },
   {
+    title: "Todo App",
+    description: "A simple todo app",
+    href: "todo.spencercraigie.com",
+    image: "/projects/todo.png",
+  },
+  {
+    title: "DVD Screen Saver",
+    description: "Simple DVD loading screen using vanilla HTML and Marquee element",
+    href: "dvd.spencercraigie.com",
+    image: "/projects/dvd.png"
+  },
+  {
     title: "Ask Spencer",
     description:
       "A ChatGPT clone that was built in an afternoon and a locally running LLM model on my home server",

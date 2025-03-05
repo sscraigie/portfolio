@@ -162,12 +162,12 @@ export function HeroParallaxSection() {
   return <HeroParallax projects={projects} />;
 }
 export const projects = [
-  {
-    title: "",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
+  //{
+  //  title: "",
+  //  link: "https://cursor.so",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+  //},
   {
     title: "Daily Dev",
     link: "https://dailyui.spencercraigie.com",
@@ -178,30 +178,29 @@ export const projects = [
     link: "https://harvard-classic.vercel.app",
     thumbnail: "/projects/harvard.png",
   },
-
+  //{
+  //  title: "Editorially",
+  //  link: "https://editorially.org",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+  //},
+  //{
+  //  title: "Editrix AI",
+  //  link: "https://editrix.ai",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+  //},
+  //{
+  //  title: "Pixel Perfect",
+  //  link: "https://app.pixelperfect.quest",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+  //},
   {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "DVD Screen Saver",
+    link: "https://dvd.spencercraigie.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      "/projects/dvd.png",
   },
   {
     title: "Speed Square",
@@ -214,40 +213,39 @@ export const projects = [
     thumbnail: "/projects/skillfit.png",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "Checkout",
+    link: "https://dailyui.spencercraigie.com/day/2",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+      "/projects/checkout.png",
+  },
+  //{
+  //  title: "Renderwork Studio",
+  //  link: "https://renderwork.studio",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  //},
+  {
+    title: "Sign Up",
+    link: "https://dailyui.spencercraigie.com/day/1",
+    thumbnail:
+      "/projects/sign-up.png",
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    title: "Calculator",
+    link: "https://dailyui.spencercraigie.com/day/4",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      "/projects/calculator.png",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "Github Clone",
+    link: "https://dailyui.spencercraigie.com/day/6",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      "/projects/github-clone.png",
   },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
+  //{
+  //  title: "Harvard Classic V1",
+  //  link: "",
+  //  thumbnail:
+  //    "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+  //},
 ];
