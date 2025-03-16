@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProviderClient } from "@/components/ThemeProviderClient";
 import { SiteHeader } from "@/components/Navbar/index";
+import { PostHogProvider } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,9 +26,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Navbar /> */}
-          <SiteHeader />
-          <div className="flex flex-1 flex-col">{children}</div>
+          <PostHogProvider>
+            <div>
+              {/* <Navbar /> */}
+              <SiteHeader />
+              <div className="flex flex-1 flex-col">{children}</div>
+            </div>
+          </PostHogProvider>
         </ThemeProviderClient>
       </body>
     </html>
