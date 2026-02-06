@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { experiences } from "@/lib/resume-data";
-import { createJsonApiResponse, createJsonApiError } from "@/lib/jsonapi-helpers";
+import { createJsonApiResponse } from "@/lib/jsonapi-helpers";
 
 /**
  * GET /api/resume/experiences - Get all work experiences
