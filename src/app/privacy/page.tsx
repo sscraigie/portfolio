@@ -14,9 +14,9 @@ export default function PrivacyPolicyPage() {
           Last updated: {lastUpdated}
         </p>
         <p className="mt-4 text-base text-gray-700 dark:text-neutral-300">
-          This Privacy Policy explains how {siteConfig.name} ("we", "us", or "our")
-          collects, uses, and protects your information when you visit this
-          website.
+          This Privacy Policy explains how {siteConfig.name} (&quot;we&quot;, &quot;us&quot;, or
+          &quot;our&quot;) collects, uses, and protects your information when you visit
+          this website.
         </p>
       </header>
 

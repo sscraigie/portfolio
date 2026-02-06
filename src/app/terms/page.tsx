@@ -14,8 +14,9 @@ export default function TermsOfServicePage() {
           Last updated: {lastUpdated}
         </p>
         <p className="mt-4 text-base text-gray-700 dark:text-neutral-300">
-          These Terms of Service ("Terms") govern your use of the Spencer Craigie website. By accessing or using the site, you agree to be bound by these
-          Terms.
+          These Terms of Service (&quot;Terms&quot;) govern your use of the Spencer Craigie
+          website. By accessing or using the site, you agree to be bound by
+          these Terms.
         </p>
       </header>
 
@@ -57,8 +58,8 @@ export default function TermsOfServicePage() {
             Disclaimers
           </h2>
           <p className="mt-2 text-gray-700 dark:text-neutral-300">
-            The site is provided on an "as is" and "as available" basis. We make
-            no warranties about accuracy, completeness, or reliability of the
+            The site is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We
+            make no warranties about accuracy, completeness, or reliability of the
             content.
           </p>
         </div>
