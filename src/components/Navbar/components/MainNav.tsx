@@ -51,6 +51,15 @@ export function MainNav() {
         >
           Blog
         </Link>
+        <Link
+          href="/contact"
+          className={cn(
+            "no-underline transition-colors hover:text-foreground/80",
+            pathname === "/contact" ? "text-foreground" : "text-foreground/60",
+          )}
+        >
+          Contact
+        </Link>
       </nav>
     </div>
   );

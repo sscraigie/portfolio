@@ -20,6 +20,10 @@ export const docsConfig = {
       href: "/blog",
     },
     {
+      title: "Contact",
+      href: "/contact",
+    },
+    {
       title: "API",
       href: "/coming-soon",
     },
