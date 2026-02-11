@@ -7,14 +7,17 @@ function Hero() {
         <source src="/reading.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative left-0 top-0 mx-auto w-full h-screen max-w-7xl px-4  py-20 md:py-40">
-        <h1 className="z-10 text-2xl font-bold dark:text-white md:text-7xl">
-          Blog
-        </h1>
-        <p className="mt-8 z-10 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
-          A place to talk about software engineer, covering coding techniques, problem-solving approaches, and industry trends.
-        </p>
+      <div className="relative flex items-center  mx-auto w-full h-[50vh] max-w-7xl px-10">
+        <div className="">
+          <h1 className="z-10 text-6xl font-bold dark:text-white md:text-7xl">
+            Blog
+          </h1>
+          <p className="mt-8 z-10 mx-auto max-w-2xl text-xl dark:text-neutral-200 md:text-3xl">
+            A place to talk about software engineer, covering coding techniques, problem-solving approaches, and industry trends.
+          </p>
+        </div>
       </div>
+      <div className="h-[50vh]"></div>
     </>
   )
 }
