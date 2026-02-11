@@ -57,7 +57,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[300vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[200vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -103,11 +103,11 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
+    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-10 h-[50vh] py-20 md:py-40">
+      <h1 className="text-6xl font-bold dark:text-white md:text-7xl">
         My Projects
       </h1>
-      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+      <p className="mt-8 max-w-2xl text-xl dark:text-neutral-200 md:text-xl">
         Here are some of the projects I have worked on over the years. I have
         used a variety of technologies and tools to make them including React,
         Next.js, Tailwind CSS, and many more.
