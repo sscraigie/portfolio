@@ -11,26 +11,13 @@ export const docsConfig = {
       href: "/projects",
     },
     {
-      title: "Docs",
-      href: "/coming-soon",
-      // href: "/docs/components/accordion",
-    },
-    {
       title: "Blog",
       href: "/blog",
     },
     {
       title: "Contact",
       href: "/contact",
-    },
-    {
-      title: "API",
-      href: "/coming-soon",
-    },
-    {
-      title: "CLI",
-      href: "/coming-soon",
-    },
+    }
   ],
   sidebarNav: [
     {

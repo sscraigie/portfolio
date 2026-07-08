@@ -1,7 +1,8 @@
 import React from "react";
 import Card from "./components/Card";
 import { HeroParallaxSection } from "./components/HeroParallax";
-import { ExpandableCard } from "./components/ProjectGrid";
+// Old grid, kept temporarily for comparison: import { ExpandableCard } from "./components/ProjectGrid";
+import { ProjectGridV2 } from "./components/ProjectGridV2";
 
 export type project = {
   title: string;
@@ -52,7 +53,7 @@ const Portfolio = () => {
   return (
     <div className="w-full">
       <HeroParallaxSection />
-      <ExpandableCard />
+      <ProjectGridV2 />
       <div className="flex w-full justify-center">
         {/* <div className="flex max-w-7xl flex-col ">
           <h1 className=" text-3xl font-bold">Portfolio</h1>
