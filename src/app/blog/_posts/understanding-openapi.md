@@ -4,15 +4,17 @@ excerpt: "APIs (Application Programming Interfaces) are the backbone of modern s
 coverImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
 date: "2025-01-16T05:35:07.322Z"
 author:
-  name: Spencer Craigie 
+  name: Spencer Craigie
   picture: "https://avatars.githubusercontent.com/u/29681901?s=400&u=0409c337f963a7b28ea70665d788a19c98495315&v=4"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-> **⚠️  This blog article was written with ChatGPT and is a place holder for other blog posts.**
-___
-# 
+> 🛈 This blog article was written with AI and is a place holder for other blog posts.
+
+---
+
+#
 
 APIs (Application Programming Interfaces) are the backbone of modern software development, enabling different systems to communicate and interact seamlessly. In this context, OpenAPI stands out as a powerful tool that helps developers design and document APIs in a standardized way. But what exactly is OpenAPI, and why is it important?
 
