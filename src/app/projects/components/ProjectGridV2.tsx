@@ -195,7 +195,7 @@ function ProjectCard({
     <div className="group relative">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-blue-500 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-70 group-focus-within:opacity-70"
+        className="pointer-events-none absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-blue-500 opacity-0 blur-md transition-opacity duration-500 group-focus-within:opacity-70 group-hover:opacity-70"
       />
       <div
         role="button"
@@ -209,8 +209,8 @@ function ProjectCard({
           }
         }}
         className={cn(
-          "relative z-10 cursor-pointer rounded-2xl outline-none transition-transform duration-300 ease-out active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-400",
-          "group-hover:-translate-y-1.5"
+          "relative z-10 cursor-pointer rounded-2xl outline-none transition-transform duration-300 ease-out focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 active:scale-[0.98]",
+          "group-hover:-translate-y-1.5",
         )}
       >
         <motion.div
@@ -233,14 +233,17 @@ function ProjectCard({
               </motion.div>
             )}
             <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <span className="flex items-center gap-1 p-4 text-sm font-semibold text-white">
+              <a
+                href={{}}
+                className="flex items-center gap-1 p-4 text-sm font-semibold text-white"
+              >
                 View project
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </span>
+              </a>
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col gap-1 p-5">
+          <div className="fex-col flex flex-1 gap-1 p-5">
             <motion.h3
               layoutId={`title-${project.title}-${id}`}
               className="text-base font-bold text-neutral-800 dark:text-neutral-100"
@@ -267,15 +270,15 @@ const PROJECTS: Project[] = [
     href: "dailyui.spencercraigie.com",
     image: "/projects/daily-dev.png",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "A 100-day challenge to design, build, and ship one small project every day. Ranging from quick UI experiments to full-stack tools. Each entry was completed within 24 hours, favoring consistency and iteration over polish, as a daily rep for sharpening front-end and full-stack skills.",
   },
   {
     title: "Harvard Classics",
     description: "Reading the Harvard Classics in 365 days",
-    href: "harvard-classic.vercel.app",
+    href: "harvard-classic.com",
     image: "/projects/harvard.png",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "The Harvard Classics—A 365-day reading challenge to read the entire collection by Dr. Charles W. Eliot. I tracked progress, wrote daily reflections, and built summaries for each work to make these foundational texts easier to revisit and share.",
   },
   {
     title: "Speed Square",
@@ -283,7 +286,7 @@ const PROJECTS: Project[] = [
     href: "speedsquare.spencercraigie.com",
     image: "/projects/speedSquare.png",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "A browser-based puzzle game inspired by the classic Rubik's Cube, reimagined in 2D. Players rotate colored tiles to match patterns and solve increasingly complex configurations. Built with smooth animations and intuitive controls to capture the satisfying challenge of spatial puzzle-solving in a simplified format.",
   },
   {
     title: "Todo App",
@@ -293,7 +296,8 @@ const PROJECTS: Project[] = [
   },
   {
     title: "DVD Screen Saver",
-    description: "Simple DVD loading screen using vanilla HTML and Marquee element",
+    description:
+      "Simple DVD loading screen using vanilla HTML and Marquee element",
     href: "dvd.spencercraigie.com",
     image: "/projects/dvd.png",
   },
@@ -302,7 +306,5 @@ const PROJECTS: Project[] = [
     description:
       "A ChatGPT clone that was built in an afternoon and a locally running LLM model on my home server",
     href: "ask.spencercraigie.com",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
 ];

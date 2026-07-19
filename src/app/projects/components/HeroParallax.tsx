@@ -103,7 +103,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-10 h-[50vh] py-20 md:py-40">
+    <div className="relative left-0 top-0 mx-auto h-[50vh] w-full max-w-7xl px-10 py-20 md:py-40">
       <h1 className="text-6xl font-bold dark:text-white md:text-7xl">
         My Projects
       </h1>
@@ -144,9 +144,8 @@ export const ProductCard = ({
       >
         <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
-          className="absolute inset-0 h-full w-full object-cover object-left-top"
+          fill
+          className="absolute inset-0 h-full w-full object-cover object-center"
           alt={product.title}
         />
       </Link>
@@ -199,8 +198,7 @@ export const projects = [
   {
     title: "DVD Screen Saver",
     link: "https://dvd.spencercraigie.com",
-    thumbnail:
-      "/projects/dvd.png",
+    thumbnail: "/projects/dvd.png",
   },
   {
     title: "Speed Square",
@@ -215,8 +213,7 @@ export const projects = [
   {
     title: "Checkout",
     link: "https://dailyui.spencercraigie.com/day/2",
-    thumbnail:
-      "/projects/checkout.png",
+    thumbnail: "/projects/checkout.png",
   },
   //{
   //  title: "Renderwork Studio",
@@ -227,20 +224,17 @@ export const projects = [
   {
     title: "Sign Up",
     link: "https://dailyui.spencercraigie.com/day/1",
-    thumbnail:
-      "/projects/sign-up.png",
+    thumbnail: "/projects/sign-up.png",
   },
   {
     title: "Calculator",
     link: "https://dailyui.spencercraigie.com/day/4",
-    thumbnail:
-      "/projects/calculator.png",
+    thumbnail: "/projects/calculator.png",
   },
   {
     title: "Github Clone",
     link: "https://dailyui.spencercraigie.com/day/6",
-    thumbnail:
-      "/projects/github-clone.png",
+    thumbnail: "/projects/github-clone.png",
   },
   //{
   //  title: "Harvard Classic V1",
