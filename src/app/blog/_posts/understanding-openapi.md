@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-> 🛈 This blog article was written with AI and is a place holder for other blog posts.
+> ⓘ This blog article was written with AI and is a place holder for other blog posts.
 
 ---
 
