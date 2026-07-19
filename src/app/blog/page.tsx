@@ -90,13 +90,15 @@ export default function Index() {
         />
        */}
         {allPosts.map((post) => (
-          <ThreeDCard
-            key={post.slug}
-            title={post.title}
-            image={post.coverImage}
-            date={post.date}
-            path={`/blog/post/${post.slug}`}
-          />
+          <a href={`/blog/post/${post.slug}`}>
+            <ThreeDCard
+              key={post.slug}
+              title={post.title}
+              image={post.coverImage}
+              date={post.date}
+              path={`/blog/post/${post.slug}`}
+            />
+          </a>
         ))}
       </div>
     </main>

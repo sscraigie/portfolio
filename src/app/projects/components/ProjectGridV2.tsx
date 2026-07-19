@@ -232,12 +232,15 @@ function ProjectCard({
                 />
               </motion.div>
             )}
-            <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="pointer-events-auto absolute inset-0 flex items-end bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <a
-                href={project.href}
+                href={`https://${project.href}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-1 p-4 text-sm font-semibold text-white"
               >
-                View project
+                View website
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>
