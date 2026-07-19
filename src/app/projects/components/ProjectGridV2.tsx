@@ -234,7 +234,7 @@ function ProjectCard({
             )}
             <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <a
-                href={{}}
+                href={project.href}
                 className="flex items-center gap-1 p-4 text-sm font-semibold text-white"
               >
                 View project
