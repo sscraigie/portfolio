@@ -90,7 +90,7 @@ export default function Index() {
         />
        */}
         {allPosts.map((post) => (
-          <a href={`/blog/post/${post.slug}`}>
+          <a key={post.slug} href={`/blog/post/${post.slug}`}>
             <ThreeDCard
               key={post.slug}
               title={post.title}
