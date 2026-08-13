@@ -16,3 +16,119 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown code {
+  @apply rounded px-1.5 py-0.5 text-[0.9em] font-mono;
+  background-color: rgb(245 245 245);
+}
+
+:global(.dark) .markdown code {
+  background-color: rgb(38 38 38);
+}
+
+.markdown pre {
+  @apply my-6 overflow-x-auto rounded-lg p-4 text-sm leading-relaxed;
+  background-color: rgb(245 245 245);
+  color: rgb(23 23 23);
+}
+
+:global(.dark) .markdown pre {
+  background-color: rgb(23 23 23);
+  color: rgb(229 229 229);
+}
+
+.markdown pre code {
+  @apply p-0 rounded-none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.markdown table {
+  @apply my-6 w-full border-collapse text-base;
+}
+
+.markdown th,
+.markdown td {
+  @apply px-3 py-2 text-left border;
+  border-color: rgb(229 229 229);
+}
+
+:global(.dark) .markdown th,
+:global(.dark) .markdown td {
+  border-color: rgb(38 38 38);
+}
+
+.markdown img {
+  @apply my-6 rounded-lg;
+}
+
+.markdown :global(.hljs-comment),
+.markdown :global(.hljs-quote) {
+  @apply italic;
+  color: rgb(115 115 115);
+}
+
+:global(.dark) .markdown :global(.hljs-comment),
+:global(.dark) .markdown :global(.hljs-quote) {
+  color: rgb(163 163 163);
+}
+
+.markdown :global(.hljs-keyword),
+.markdown :global(.hljs-selector-tag),
+.markdown :global(.hljs-literal),
+.markdown :global(.hljs-type) {
+  color: rgb(147 51 234);
+}
+
+:global(.dark) .markdown :global(.hljs-keyword),
+:global(.dark) .markdown :global(.hljs-selector-tag),
+:global(.dark) .markdown :global(.hljs-literal),
+:global(.dark) .markdown :global(.hljs-type) {
+  color: rgb(192 132 252);
+}
+
+.markdown :global(.hljs-string),
+.markdown :global(.hljs-attr),
+.markdown :global(.hljs-regexp) {
+  color: rgb(21 128 61);
+}
+
+:global(.dark) .markdown :global(.hljs-string),
+:global(.dark) .markdown :global(.hljs-attr),
+:global(.dark) .markdown :global(.hljs-regexp) {
+  color: rgb(74 222 128);
+}
+
+.markdown :global(.hljs-number),
+.markdown :global(.hljs-symbol) {
+  color: rgb(217 119 6);
+}
+
+:global(.dark) .markdown :global(.hljs-number),
+:global(.dark) .markdown :global(.hljs-symbol) {
+  color: rgb(251 191 36);
+}
+
+.markdown :global(.hljs-title),
+.markdown :global(.hljs-function),
+.markdown :global(.hljs-name) {
+  color: rgb(37 99 235);
+}
+
+:global(.dark) .markdown :global(.hljs-title),
+:global(.dark) .markdown :global(.hljs-function),
+:global(.dark) .markdown :global(.hljs-name) {
+  color: rgb(96 165 250);
+}
+
+.markdown :global(.hljs-variable),
+.markdown :global(.hljs-attribute),
+.markdown :global(.hljs-built_in) {
+  color: rgb(3 105 161);
+}
+
+:global(.dark) .markdown :global(.hljs-variable),
+:global(.dark) .markdown :global(.hljs-attribute),
+:global(.dark) .markdown :global(.hljs-built_in) {
+  color: rgb(56 189 248);
+}
