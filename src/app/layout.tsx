@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <PostHogProvider>
-            <div>
+            <div className="flex h-screen flex-col">
               {/* <Navbar /> */}
               <SiteHeader />
               <div className="flex flex-1 flex-col">{children}</div>
