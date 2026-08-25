@@ -1,15 +1,17 @@
-# Daily UI Challenge
+# [SpencerCraigie.com](https://spencercraigie.com/)
 
-This is a 100-day challenge to help practice frontend development.
+Hello 👋
 
-You can view all days by going to [dailyui.spencercraigie.com](https://dailyui.spencercraigie.com/)
+I'm Spencer, and this is my full stack developer portfolio!
 
-## Table of Contents
+It's built with Next.js and includes pages for my projects, blog articles, documentation, and contact pages.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+## Features
+
+- **Projects** — a showcase of things I've built
+- **Blog** — Markdown-powered posts with syntax highlighting and Mermaid diagram support
+- **Contact** — a contact form for getting in touch
+- Light/dark theme support
 
 ## Installation
 
@@ -17,12 +19,10 @@ Clone the repository and run `npm install`.
 
 ## Usage
 
-Run `npm run start` to start the development server.
+Run `npm run dev` to start the development server.
 
-## Credits
+Other available scripts:
 
-This challenge was inspired by [Daily UI](https://www.dailyui.co/).
-
-## License
-
-[MIT](https://opensource.org/licenses/MIT)
+- `npm run build` — build for production
+- `npm run start` — run the production build
+- `npm run lint` — lint the codebase
