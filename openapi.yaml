@@ -1,0 +1,549 @@
+openapi: 3.0.3
+info:
+  title: Spencer Craigie Resume API
+  description: |
+    Resume API for Spencer Craigie's portfolio website. This API follows the JSON:API specification
+    and provides access to professional experience, education, skills, projects, and profile information.
+    
+    All responses conform to the JSON:API standard (https://jsonapi.org/).
+  version: 1.0.0
+  contact:
+    name: Spencer Craigie
+    url: https://www.spencercraigie.com
+    email: contact@spencercraigie.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://www.spencercraigie.com/api
+    description: Production server
+  - url: http://localhost:3000/api
+    description: Local development server
+
+paths:
+  /resume:
+    get:
+      summary: Get complete resume
+      description: Returns all resume data including profile, experiences, education, skills, projects, and certifications in a single compound JSON:API document.
+      operationId: getResume
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/CompoundResumeResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /resume/profile:
+    get:
+      summary: Get profile information
+      description: Returns profile information including name, title, contact details, and social links.
+      operationId: getProfile
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /resume/experiences:
+    get:
+      summary: Get work experiences
+      description: Returns all work experience entries.
+      operationId: getExperiences
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ExperiencesResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /resume/education:
+    get:
+      summary: Get education records
+      description: Returns all education entries.
+      operationId: getEducation
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/EducationResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /resume/skills:
+    get:
+      summary: Get skills
+      description: Returns all skills entries.
+      operationId: getSkills
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/SkillsResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /resume/projects:
+    get:
+      summary: Get projects
+      description: Returns all project entries.
+      operationId: getProjects
+      tags:
+        - Resume
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ProjectsResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    JsonApiVersion:
+      type: object
+      properties:
+        version:
+          type: string
+          example: "1.0"
+      required:
+        - version
+
+    JsonApiLinks:
+      type: object
+      properties:
+        self:
+          type: string
+          format: uri
+          example: "https://www.spencercraigie.com/api/resume"
+
+    ResourceLinks:
+      type: object
+      properties:
+        self:
+          type: string
+          format: uri
+
+    ProfileAttributes:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Spencer Craigie"
+        title:
+          type: string
+          example: "Full Stack Software Engineer"
+        email:
+          type: string
+          format: email
+          example: "contact@spencercraigie.com"
+        location:
+          type: string
+          example: "Moscow, Idaho"
+        summary:
+          type: string
+        website:
+          type: string
+          format: uri
+          example: "https://www.spencercraigie.com"
+        github:
+          type: string
+          format: uri
+          example: "https://github.com/sscraigie"
+        linkedin:
+          type: string
+          format: uri
+          example: "https://www.linkedin.com/in/spencercraigie/"
+      required:
+        - name
+        - title
+        - email
+        - location
+        - summary
+        - website
+        - github
+        - linkedin
+
+    ExperienceAttributes:
+      type: object
+      properties:
+        title:
+          type: string
+          example: "Software Engineer"
+        company:
+          type: string
+          example: "Lightcast"
+        location:
+          type: string
+          example: "Moscow, Idaho"
+        startDate:
+          type: string
+          format: date
+          example: "2022-07"
+        endDate:
+          type: string
+          format: date
+          nullable: true
+          example: null
+        description:
+          type: string
+        highlights:
+          type: array
+          items:
+            type: string
+      required:
+        - title
+        - company
+        - location
+        - startDate
+        - description
+        - highlights
+
+    EducationAttributes:
+      type: object
+      properties:
+        degree:
+          type: string
+          example: "Bachelor of Science"
+        field:
+          type: string
+          example: "Computer Science"
+        institution:
+          type: string
+          example: "Washington State University"
+        location:
+          type: string
+          example: "Pullman, Washington"
+        startDate:
+          type: string
+          format: date
+          example: "2017-08"
+        endDate:
+          type: string
+          format: date
+          example: "2021-05"
+        gpa:
+          type: string
+          nullable: true
+      required:
+        - degree
+        - field
+        - institution
+        - location
+        - startDate
+        - endDate
+
+    SkillAttributes:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "TypeScript"
+        category:
+          type: string
+          example: "Programming Languages"
+        proficiency:
+          type: string
+          enum:
+            - Beginner
+            - Intermediate
+            - Advanced
+            - Expert
+          example: "Advanced"
+      required:
+        - name
+        - category
+        - proficiency
+
+    ProjectAttributes:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Daily UI Challenge"
+        description:
+          type: string
+        url:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://dailyui.spencercraigie.com"
+        technologies:
+          type: array
+          items:
+            type: string
+        highlights:
+          type: array
+          items:
+            type: string
+      required:
+        - name
+        - description
+        - technologies
+        - highlights
+
+    ProfileResource:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - profile
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/ProfileAttributes'
+        links:
+          $ref: '#/components/schemas/ResourceLinks'
+      required:
+        - type
+        - id
+        - attributes
+
+    ExperienceResource:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - experiences
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/ExperienceAttributes'
+        links:
+          $ref: '#/components/schemas/ResourceLinks'
+      required:
+        - type
+        - id
+        - attributes
+
+    EducationResource:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - education
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/EducationAttributes'
+        links:
+          $ref: '#/components/schemas/ResourceLinks'
+      required:
+        - type
+        - id
+        - attributes
+
+    SkillResource:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - skills
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/SkillAttributes'
+        links:
+          $ref: '#/components/schemas/ResourceLinks'
+      required:
+        - type
+        - id
+        - attributes
+
+    ProjectResource:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - projects
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/ProjectAttributes'
+        links:
+          $ref: '#/components/schemas/ResourceLinks'
+      required:
+        - type
+        - id
+        - attributes
+
+    ProfileResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          $ref: '#/components/schemas/ProfileResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    ExperiencesResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExperienceResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    EducationResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/EducationResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    SkillsResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/SkillResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    ProjectsResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    CompoundResumeResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        data:
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/ProfileResource'
+              - $ref: '#/components/schemas/ExperienceResource'
+              - $ref: '#/components/schemas/EducationResource'
+              - $ref: '#/components/schemas/SkillResource'
+              - $ref: '#/components/schemas/ProjectResource'
+        links:
+          $ref: '#/components/schemas/JsonApiLinks'
+      required:
+        - jsonapi
+        - data
+
+    ErrorObject:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "500"
+        title:
+          type: string
+          example: "Internal Server Error"
+        detail:
+          type: string
+          example: "An unexpected error occurred"
+      required:
+        - status
+        - title
+
+    ErrorResponse:
+      type: object
+      properties:
+        jsonapi:
+          $ref: '#/components/schemas/JsonApiVersion'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorObject'
+      required:
+        - jsonapi
+        - errors
+
+tags:
+  - name: Resume
+    description: Resume data endpoints following JSON:API specification
