@@ -1,7 +1,7 @@
 ---
 title: "What Actually Happens When You Open a Terminal?"
 excerpt: "A deep dive into how terminals actually work, from terminal emulators and PTYs to the TTY subsystem underneath."
-coverImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd9WZDSg2SSHB8Hkjcoi2HCGdnTiab_Tj8Q&s"
+coverImage: "/blog/terminal.png"
 date: "2025-01-16T05:35:07.322Z"
 author:
   name: Spencer Craigie
@@ -40,10 +40,10 @@ Today, when someone says "open a terminal," they're usually talking about an app
 
 ```text
 ┌────────────────────────────────────────────┐
-│ $ whoami                                    │
-│ alex                                        │
-│ $ _                                         │
-│                                              │
+│ $ whoami                                   │
+│ alex                                       │
+│ $ _                                        │
+│                                            │
 └────────────────────────────────────────────┘
 ```
 
