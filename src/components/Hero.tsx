@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Spline from "@splinetool/react-spline";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
@@ -12,6 +15,22 @@ export const Hero = () => {
         <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
           This is my full stack developer portfolio.
         </p>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-neutral-400 dark:border-neutral-600"
+          >
+            <Link href="/projects">View Projects</Link>
+          </Button>
+          <Button asChild size="lg" variant="ghost" className="group">
+            <Link href="/contact">
+              Contact Me
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </div>
       </div>
       <div className="h-96 w-full justify-center ">
         <Spline
