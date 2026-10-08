@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { DialogProps } from "@radix-ui/react-alert-dialog";
 import {
   CircleIcon,
+  CubeIcon,
   FileIcon,
   LaptopIcon,
   MoonIcon,
@@ -13,6 +14,7 @@ import {
 import { useTheme } from "next-themes";
 
 import { docsConfig } from "@/config/docs";
+import { PROJECTS } from "@/config/projects";
 import cn from "classnames"
 import { Button } from "@/components/ui/button";
 import {
@@ -87,6 +89,27 @@ export function CommandMenu({ ...props }: DialogProps) {
               >
                 <FileIcon className="mr-2 h-4 w-4" />
                 {navItem.title}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Projects">
+            {PROJECTS.map((project) => (
+              <CommandItem
+                key={project.title}
+                value={`${project.title} ${project.description}`}
+                onSelect={() => {
+                  runCommand(() =>
+                    window.open(
+                      `https://${project.href}`,
+                      "_blank",
+                      "noopener",
+                    ),
+                  );
+                }}
+              >
+                <CubeIcon className="mr-2 h-4 w-4" />
+                {project.title}
               </CommandItem>
             ))}
           </CommandGroup>
