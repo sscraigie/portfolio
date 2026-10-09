@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
@@ -15,6 +15,7 @@ import { PROJECTS, type Project } from "@/config/projects";
  * `page.tsx` before the old one is removed.
  */
 export function ProjectGridV2() {
+  const router = useRouter();
   const projectParam = useSearchParams().get("project");
   const [active, setActive] = useState<Project | null>(null);
   const id = useId();
@@ -39,7 +40,7 @@ export function ProjectGridV2() {
     setActive(null);
     lastFocusedRef.current?.focus();
     if (projectParam) {
-      window.history.replaceState(null, "", "/projects");
+      router.replace("/projects", { scroll: false });
     }
   };
 
