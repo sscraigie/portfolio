@@ -100,10 +100,8 @@ export function CommandMenu({ ...props }: DialogProps) {
                 value={`${project.title} ${project.description}`}
                 onSelect={() => {
                   runCommand(() =>
-                    window.open(
-                      `https://${project.href}`,
-                      "_blank",
-                      "noopener",
+                    router.push(
+                      `/projects?project=${encodeURIComponent(project.title)}`,
                     ),
                   );
                 }}

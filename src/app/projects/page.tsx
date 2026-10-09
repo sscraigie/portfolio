@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Card from "./components/Card";
 import { HeroParallaxSection } from "./components/HeroParallax";
 // Old grid, kept temporarily for comparison: import { ExpandableCard } from "./components/ProjectGrid";
@@ -53,7 +53,9 @@ const Portfolio = () => {
   return (
     <div className="w-full">
       <HeroParallaxSection />
-      <ProjectGridV2 />
+      <Suspense>
+        <ProjectGridV2 />
+      </Suspense>
       <div className="flex w-full justify-center">
         {/* <div className="flex max-w-7xl flex-col ">
           <h1 className=" text-3xl font-bold">Portfolio</h1>
